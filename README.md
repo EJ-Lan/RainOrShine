@@ -41,7 +41,7 @@ This project requires Node.js and npm to run. Visit [Node.js](https://nodejs.org
 
 2. Navigate to the project directory
   ```bash
-  cd RainOrShine
+  cd rain-or-shine
   ```
 
 3. Install NPM packages
