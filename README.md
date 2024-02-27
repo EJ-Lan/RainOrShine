@@ -1,10 +1,10 @@
 # RainOrShine
 
-RainOrShine is a dynamic weather application designed to provide users with the latest weather updates for any location of their choosing. Built with ReactJS, HTML, CSS (utilizing both Grid and Flexbox), and SASS, this application offers a sleek, user-friendly interface that's responsive and accessible on all devices. Hosted on AWS S3, RainOrShine leverages the OpenWeatherMap API to deliver real-time weather data, including current conditions, forecasts, air quality indexes, and more.
+RainOrShine is a dynamic weather application designed to provide users with the latest weather updates for any location of their choosing. Built with ReactJS, HTML, CSS (utilizing both Grid and Flexbox), and SASS, this application offers a sleek, user-friendly interface that's responsive and accessible on all devices. Hosted on AWS S3, RainOrShine leverages the [OpenWeatherMap API](https://openweathermap.org/) to deliver real-time weather data, including current conditions, forecasts, air quality indexes, and more.
 
 ## Features
 
-- **Consume API from [OpenWeatherMap API](https://openweathermap.org/)**: Fetch and display real-time weather data.
+- **Consume API from OpenWeatherMap API**: Fetch and display real-time weather data.
 - **Current Weather Conditions**: Users can search for and view the weather in their chosen location.
 - **Weather Forecast**: Offers both a 24-hour outlook for a selected day and a default 7-day forecast.
 - **Change Weather Location**: Easily search for and switch to different cities to view their weather conditions.
