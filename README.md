@@ -4,7 +4,7 @@ RainOrShine is a dynamic weather application designed to provide users with the 
 
 ## Features
 
-- **Consume API from OpenWeatherMap API**: Fetch and display real-time weather data.
+- **Consume API from [OpenWeatherMap API](https://openweathermap.org/)**: Fetch and display real-time weather data.
 - **Current Weather Conditions**: Users can search for and view the weather in their chosen location.
 - **Weather Forecast**: Offers both a 24-hour outlook for a selected day and a default 7-day forecast.
 - **Change Weather Location**: Easily search for and switch to different cities to view their weather conditions.
