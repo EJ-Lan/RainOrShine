@@ -16,7 +16,7 @@ const App = () => {
 
     return (
         <div className="app-grid">
-            <Header toggleTheme={toggleTheme}/>
+            <Header toggleTheme={toggleTheme} />
             <SearchSection />
             <SideBar />
             <WeatherSection />

@@ -5,6 +5,14 @@
   gap: 10px;
 }
 
+.search-section h2 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 .search-container {
   display: flex;
   justify-content: center;
