@@ -1,7 +1,7 @@
 .search-button {
   padding: 10px;
-  border-radius: 50%;
-  border: none;
+  border-radius: 20%;
+  border: 2px solid var(--search-button-border-color);
   cursor: pointer;
   background-color: #f0f0f0;
   display: flex;

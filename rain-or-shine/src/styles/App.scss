@@ -5,7 +5,7 @@
     'search search search'
     'sidebar weather weather';
   grid-template-columns: 300px 1fr 1fr;
-  grid-template-rows: auto 1fr 3fr;
+  grid-template-rows: auto 0.6fr 3fr;
   gap: 0;
   height: 100vh;
   margin: 0;
