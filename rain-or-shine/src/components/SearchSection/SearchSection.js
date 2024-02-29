@@ -6,8 +6,11 @@ import './styles/SearchSection.scss';
 const SearchSection = () => {
     return (
         <section className="search-section">
-            <SearchBar />
-            <SearchButton />
+            <h2>Search A City</h2>
+            <div className="search-container">
+                <SearchBar/>
+                <SearchButton/>
+            </div>
         </section>
     );
 };

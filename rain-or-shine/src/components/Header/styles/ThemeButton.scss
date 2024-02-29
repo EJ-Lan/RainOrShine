@@ -1,0 +1,25 @@
+.theme-toggle-button {
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--theme-button-bg-light);
+  border-color: var(--theme-button-border-light);
+  color: var(--theme-button-text-light);
+
+  img {
+    width: 20px;
+    height: auto;
+    fill: currentColor;
+  }
+
+  /* Dark mode styles */
+  &[data-theme='dark'] {
+    background-color: var(--theme-button-bg-dark);
+    border-color: var(--theme-button-border-dark);
+    color: var(--theme-button-text-dark);
+  }
+}

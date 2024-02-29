@@ -1,0 +1,30 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --header-bg-color: #add8e6;
+  --search-section-bg-color: #eeeeee;
+  --sidebar-bg-color: #dddddd;
+  --weather-section-bg-color: #cccccc;
+  --theme-button-bg-light: #cccccc;
+  --theme-button-border-light: #424242;
+  --theme-button-text-light: #ffffff;
+}
+
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --header-bg-color: #1e1e1e;
+  --search-section-bg-color: #2a2a2a;
+  --sidebar-bg-color: #333333;
+  --weather-section-bg-color: #424242;
+  --theme-button-bg-dark: #cccccc;
+  --theme-button-border-dark: #424242;
+  --theme-button-text-dark: #ffffff;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}

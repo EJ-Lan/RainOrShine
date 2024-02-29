@@ -1,10 +1,12 @@
 import React from 'react';
 import './styles/Header.scss';
+import ThemeButton from "./ThemeButton";
 
-const Header = () => {
+const Header = ({ toggleTheme }) => {
     return (
         <header className="header">
-            Header
+            <h1>RainOrShine</h1>
+            <ThemeButton toggleTheme={toggleTheme} />
         </header>
     );
 };
