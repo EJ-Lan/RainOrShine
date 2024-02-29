@@ -1,10 +1,13 @@
 import React from 'react';
-import './SearchSection.scss';
+import SearchBar from "./SearchBar";
+import SearchButton from "./SearchButton";
+import './styles/SearchSection.scss';
 
 const SearchSection = () => {
     return (
         <section className="search-section">
-            Search Section
+            <SearchBar />
+            <SearchButton />
         </section>
     );
 };

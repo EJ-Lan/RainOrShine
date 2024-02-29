@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import SearchSection from "./components/SearchSection/SearchSection";
 import SideBar from "./components/Sidebar/SideBar";
 import WeatherSection from "./components/WeatherSection/WeatherSection";
-import './App.scss';
+import './styles/App.scss';
 
 const App = () => {
     return (
