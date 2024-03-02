@@ -1,12 +1,15 @@
 import React from 'react';
+import CloudCard from './CloudsCard';
+import SunriseSunsetCard from './SunriseSunsetCard';
 import './styles/Sidebar.scss';
 
-const SideBar = () => {
+const Sidebar = () => {
     return (
         <aside className="sidebar">
-            Side Bar
+            <CloudCard />
+            <SunriseSunsetCard />
         </aside>
     );
 };
 
-export default SideBar;
+export default Sidebar;

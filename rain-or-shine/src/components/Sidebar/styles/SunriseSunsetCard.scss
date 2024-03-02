@@ -1,0 +1,27 @@
+.sunrise-sunset-card {
+    background-color: var(--sidebar-bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--search-button-border-color); /* More defined border */
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+    img {
+      width: 50px; 
+    }
+  
+    h3, p {
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sunrise-sunset-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
