@@ -8,7 +8,7 @@ import './styles/App.scss';
 
 const App = () => {
     const [theme, setTheme] = useState('light');
-    const [city, setCity] = useState('London'); // Default city
+    const [city, setCity] = useState('London');
 
     const toggleTheme = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
