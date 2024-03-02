@@ -36,7 +36,7 @@ This project requires Node.js and npm to run. Visit [Node.js](https://nodejs.org
 
 1. Clone the repo
   ```bash
-  git clone https://github.com/yourusername/RainOrShine.git
+  git clone https://github.com/EJ-Lan/RainOrShine.git
   ```
 
 2. Navigate to the project directory
