@@ -1,4 +1,5 @@
 .weather-section {
-  padding: 10px;
-  text-align: center;
+  background-color: var(--weather-section-bg-color);
+  padding: 1rem;
+  overflow-y: auto; 
 }

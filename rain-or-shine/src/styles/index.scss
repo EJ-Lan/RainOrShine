@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  font-family: inherit;
+}
+
 .header h1, .search-section h2 {
   font-family: 'Roboto', sans-serif;
 }
@@ -15,6 +34,9 @@
   --theme-button-border-light: #424242;
   --theme-button-text-light: #ffffff;
   --search-button-border-color: #424242;
+  --sidebar-border-color: #424242; 
+  --weather-card-border-color: #424242; 
+  --button-border-color-light: #424242;
 }
 
 [data-theme='dark'] {
@@ -28,6 +50,9 @@
   --theme-button-border-dark: #424242;
   --theme-button-text-dark: #ffffff;
   --search-button-border-color:#424242;
+  --sidebar-border-color: #ffffff; 
+  --weather-card-border-color: #ffffff; 
+  --button-border-color-dark: #ffffff;
 }
 
 body, html {

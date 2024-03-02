@@ -1,4 +1,12 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cloud-card, .sunrise-sunset-card {
+  flex: 1; 
   padding: 10px;
-  text-align: center;
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
 }
