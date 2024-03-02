@@ -2,9 +2,9 @@ import React from 'react';
 import searchIcon from '../../assets/icons/search.png';
 import './styles/SearchButton.scss';
 
-const SearchButton = () => {
+const SearchButton = ({ onSearchSubmit }) => {
     return (
-        <button className="search-button">
+        <button className="search-button" onClick={onSearchSubmit}>
             <img src={searchIcon} alt="Search" />
         </button>
     );

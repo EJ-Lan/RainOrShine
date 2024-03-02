@@ -1,17 +1,17 @@
 import React from 'react';
 import './styles/CloudCard.scss';
-import cloudIcon from '../../assets/icons/cloud.png';
+import cloudIcon from '../../assets/icons/cloud.png'; 
 
-const CloudCard = () => {
+const CloudCard = ({ cloudiness }) => {
     return (
-      <div className="cloud-card">
-        <img src={cloudIcon} alt="Cloud Coverage" />
-        <div>
-          <h3>Cloud Coverage</h3>
-          <p>50%</p> 
+        <div className="cloud-card">
+            <img src={cloudIcon} alt="Cloud Coverage" />
+            <div>
+                <h3>Cloud Coverage</h3>
+                <p>{cloudiness ?? 'N/A'}%</p> 
+            </div>
         </div>
-      </div>
     );
-  };
-  
-  export default CloudCard;
+};
+
+export default CloudCard;

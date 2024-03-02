@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SearchBar from "./SearchBar";
 import SearchButton from "./SearchButton";
 import './styles/SearchSection.scss';
 
-const SearchSection = () => {
+const SearchSection = ({ onSearch }) => {
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+
+    const handleSearchSubmit = () => {
+        onSearch(searchTerm); // Trigger the search
+    };
+
     return (
         <section className="search-section">
             <h2>Search A City</h2>
             <div className="search-container">
-                <SearchBar/>
-                <SearchButton/>
+                <SearchBar onSearchChange={handleSearchChange} />
+                <SearchButton onSearchSubmit={handleSearchSubmit} />
             </div>
         </section>
     );

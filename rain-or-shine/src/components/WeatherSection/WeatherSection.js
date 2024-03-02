@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import WeatherSectionHeader from './WeatherSectionHeader';
 import WeatherCardDay from './WeatherCards/WeatherCardDay';
 import WeatherCardHour from './WeatherCards/WeatherCardHour';
 import './styles/WeatherSection.scss';
+import { fetchGeocoding, fetchForecast } from '../../utils/api';
 
-const WeatherSection = () => {
-    const [forecastType, setForecastType] = useState('7-day'); // For toggling between views
+const WeatherSection = ({ city }) => {
+    const [forecastData, setForecastData] = useState(null);
+    const [forecastType, setForecastType] = useState('daily');
 
-    // Placeholder data
-    const dayData = [
-        { day: 'Monday', description: 'Sunny', temp: '25', tempFeelsLike: '23' },
-        { day: 'Tuesday', description: 'Cloudy', temp: '22', tempFeelsLike: '20' },
-        // Add more days as necessary
-    ];
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const geocodeData = await fetchGeocoding(city);
+                if (geocodeData && geocodeData.length > 0) {
+                    const { lat, lon } = geocodeData[0];
+                    const forecastWeatherData = await fetchForecast(lat, lon);
+                    setForecastData(forecastWeatherData);
+                }
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        };
 
-    const hourData = [
-        { day: 'Monday', hour: '10:00', temp: '20', tempFeelsLike: '18' },
-        { day: 'Monday', hour: '13:00', temp: '23', tempFeelsLike: '21' },
-        // Add more hours as necessary
-    ];
+        fetchData();
+    }, [city]);
 
     const onToggleForecast = (type) => {
         setForecastType(type);
@@ -26,16 +32,32 @@ const WeatherSection = () => {
 
     return (
         <section className="weather-section">
-            <WeatherSectionHeader city="City Name" onToggleForecast={onToggleForecast} />
-            {forecastType === '7-day' ? (
-                dayData.map((data, index) => (
-                    <WeatherCardDay key={index} {...data} />
-                ))
-            ) : (
-                hourData.map((data, index) => (
-                    <WeatherCardHour key={index} {...data} />
-                ))
-            )}
+            <WeatherSectionHeader city={city} forecastType={forecastType} onToggleForecast={onToggleForecast} />
+            
+            {forecastType === 'daily' && forecastData?.list?.filter((_, index) => index % 8 === 0).map((item, index) => (
+                <WeatherCardDay
+                    key={index}
+                    day={new Date(item.dt * 1000).toLocaleDateString('en-US', { weekday: 'long' })}
+                    description={item.weather[0].description}
+                    temp={Math.round(item.main.temp)}
+                    tempFeelsLike={Math.round(item.main.feels_like)}
+                />
+            ))}
+            
+            {forecastType === 'hourly' && forecastData?.list?.slice(0, 24).map((item, index) => (
+                <WeatherCardHour
+                    key={index}
+                    dateTime={new Date(item.dt * 1000).toLocaleString('en-US', {
+                        weekday: 'short',
+                        month: 'short',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    })}
+                    temp={Math.round(item.main.temp)}
+                    tempFeelsLike={Math.round(item.main.feels_like)}
+                />
+            ))}
         </section>
     );
 };

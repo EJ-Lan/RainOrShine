@@ -1,12 +1,18 @@
 import React from 'react';
 import './styles/WeatherSectionHeader.scss';
 
-const WeatherSectionHeader = ( { city, onToggleForecast }) => {
+const WeatherSectionHeader = ({ city, forecastType, onToggleForecast }) => {
     return (
         <div className="weather-section-header">
             <h2>{city}</h2>
-            <button onClick={() => onToggleForecast('7-day')}>7-Day</button>
-            <button onClick={() => onToggleForecast('24-hour')}>24-Hour</button>
+            <button
+                className={forecastType === 'daily' ? 'active' : ''}
+                onClick={() => onToggleForecast('daily')}>5-Day
+            </button>
+            <button
+                className={forecastType === 'hourly' ? 'active' : ''}
+                onClick={() => onToggleForecast('hourly')}>3-Hour
+            </button>
         </div>
     );
 };
