@@ -11,7 +11,7 @@ const SearchSection = ({ onSearch }) => {
     };
 
     const handleSearchSubmit = () => {
-        onSearch(searchTerm); // Trigger the search
+        onSearch(searchTerm); 
     };
 
     return (
